@@ -1,0 +1,2 @@
+# Cryptocurrency-Transaction-Analysis
+The real challenge for cryptocurrency transaction analysis is to first decode the raw broadcast transactions and the then store it to process the transaction in real time or at a later time.  We intent to provide daily API to the end users to do analysis, prediction and day to day usage. These API’s contain live transaction updates, single transaction status. Block information. BTC calculator, and historic transaction. 
