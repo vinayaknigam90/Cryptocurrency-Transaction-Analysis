@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+<style>
+.dropbtn {
+    background-color: #353030;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+<body>
+ 
+ <div class="topnav">
+ 	<div class="leftText"><a href="/home">Home</a></div>
+ 	<div class="leftText"><a href="#">About</a></div>
+ 	<div class="contactText"><a href="#">Contact</a></div>
+ </div>
+ <div class="logoutText" style="width: 100px"><a href="/logout">Logout</a></div>
+ <div class="dropdown" style="padding-top: 20px">
+<button onclick="myFunction()" class="dropbtn">Our Products ↓</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="/transaction">Live Transactions</a>
+    <a href="/transactionDetails">Other Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<div class="home">
+ <h1 style="text-align: center;padding-top: 20px;"> Cryptocurrency Transaction Analysis</h1>
+ <table width="1165px" border="0">
+    <tr>
+    <th width="20%"><img src="../static/bitcoin.png" width="60px" height="60px"><br>BTC<br>$3,629<br><p style="color: red; margin-top: -1px">-11.8%</p></th>
+    <th width="20%"><img src="../static/xrp.png" width="160px" height="60px"><br>XRP<br>$0.3<br><p style="color: red; margin-top: -1px">-9.98%</p></th>
+    <th width="20%"><img src="../static/eth.png" width="100px" height="60px"><br>ETH<br>$86<br><p style="color: red; margin-top: -1px">-15.61%</p></th>
+    <th width="20%"><img src="../static/btc.jpeg" width="120px" height="60px"><br>BCH<br>$123<br><p style="color: red; margin-top: -1px">-13.54%</p></th>
+    <th width="20%"><img src="../static/ltc.png" width="120px" height="60px"><br>LTC<br>$25<br><p style="color: red; margin-top: -1px">-12.50%</p></th>
+  </tr>
+  </table>
+  <h2 style="padding-left: 15px; padding-top: 15px">Top 5 Cryptocurrencies</h2>
+  <p style="padding-left: 15px;">Check out our latest top 5 cryptocurrencies price analysis and find out which one is the most prominent and profitable.</p>
+  <h2 style="padding-left: 15px; padding-top: 15px">BTC/USD</h2>
+<p style="padding-left: 15px;">The main trend in Bitcoin is down. For the past two days, the bulls have been trying to defend the trendline of the pennant but have not been able to push prices higher. This shows a lack of buying at higher levels and selling pressure. The moving averages are sloping down and the RSI is close to oversold territory. A breakdown of the pennant will resume the downtrend and has a pattern target of $2,416.52.</p>
+<p><img src="../static/btcGraph.png" width="1160px" height="600px"></p>
+</div>
+</body>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</html>

@@ -1,0 +1,357 @@
+* {
+box-sizing: border-box;
+}
+ 
+*:focus {
+	outline: none;
+}
+body {
+font-family: Arial;
+background-size: 1284px 800px;
+padding: 50px;
+}
+
+body::after {
+  background: url("Cryptocurrency.jpg");
+  content: "";
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1; 
+  height: 2000px;  
+}
+
+.login {
+margin: 20px auto;
+width: 400px;
+}
+.login-screen {
+background-color: #FFF;
+padding: 20px;
+border-radius: 5px
+}
+ 
+.app-title {
+text-align: center;
+color: #000000;
+padding-top: 30px;
+}
+ 
+.login-form {
+text-align: center;
+}
+.control-group {
+margin-bottom: 10px;
+}
+ 
+input {
+text-align: center;
+background-color: #ECF0F1;
+border: 2px solid transparent;
+border-radius: 3px;
+font-size: 16px;
+font-weight: 200;
+padding: 10px 0;
+width: 250px;
+transition: border .5s;
+}
+ 
+input:focus {
+border: 2px solid #3498DB;
+box-shadow: none;
+}
+ 
+.btn {
+  border: 2px solid transparent;
+  background: #3498DB;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 3px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
+ 
+.btn:hover {
+  background-color: #2980B9;
+}
+ 
+.login-link {
+  font-size: 12px;
+  color: #444;
+  display: block;
+	margin-top: 12px;
+}
+
+.homeTopPanel {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 7%;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-shadow: 0 0 2px 1px rgba(175, 175, 175, 1);
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    margin: -58px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.logoutText{
+  padding-top: 24px;
+}
+
+.logoutText a{
+  padding-top: 24px;
+  padding-left: 1144px;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.content {
+    background-color: #fff;
+    padding: 5px;
+    margin-top: 35px;
+    opacity: 0.95;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 10px;
+}
+
+td {
+    text-align: left;
+    padding: 25px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.viewBtn {
+    color: rgb(16, 173, 228);
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(238, 242, 245);
+    border-image: initial;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 15%;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 74, 124);
+    cursor: pointer;
+    opacity: 0.8;
+    font-family: Montserrat, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0px 1rem;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    border-radius: 0.125rem;
+    outline: none;
+    transition: all 0.3s ease 0s;
+    margin-left: 500px;
+}
+
+.home {
+    background-color: #fff;
+    padding: 0px;
+    height: 1200px;
+    margin-top: 35px;
+    opacity: 0.95;
+}
+
+
+
+#login-box {
+    position: relative;
+    margin: 0% auto;
+    height: 500px;
+    width: 870px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.left-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 400px;
+    height: 400px;
+    padding-top: 90px;
+}
+
+h1
+{
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+input[type="text"],
+input[type="password"]
+{
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 4px;
+    width: 325px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #aaa;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+input[type="submit"]
+{
+    margin-bottom: 28px;
+    width: 220px;
+    height: 40px;
+    background: #55acee;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+    cursor: pointer;
+    
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus
+{
+    background: #ff5722;
+    transition: 0.2s ease;
+}
+
+.right-box {
+    position: absolute;
+    top: 0;
+    right: 108px;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    padding-top: 90px;
+}
+
+.or
+{
+    position: absolute;
+    top: 206px;
+    left: 410px;
+    width: 40px;
+    height: 40px;
+    background: #efefef;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    line-height: 40px;
+    text-align: center;
+}
+
+.right-box .signinwith
+{
+    display: block;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+button.social
+{
+    margin-bottom: 20px;
+    width: 220px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.facebook
+{
+    background: #32508e;
+}
+.twitter
+{
+    background: #55acee;
+}
+.google
+{
+    background: #dd4b39;
+}
+
+
+
+
+
+

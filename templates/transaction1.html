@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/static/style.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<body>
+ 
+ <div class="topnav">
+ 	<div class="leftText"><a href="/home">Home</a></div>
+ 	<div class="leftText"><a href="#">About</a></div>
+ 	<div class="contactText"><a href="#">Contact</a></div>
+ </div>
+ <div class="logoutText"><a href="/logout">Logout</a></div>
+
+<div class="content">
+  <h3 style="margin-left: 40px">Transactions</h3>
+  <table>
+  	<tr>
+  	<th width="55%">Transaction Hash</th>
+  	<th width="15%">Age</th>
+  	<th width="25%">Amount(BTC)</th>
+  	<th width="25%">Amount(USD)</th>
+  </tr>
+  <div id = "sysStatus">
+  {% for post in posts %}
+  <tr>
+  	<td>{{post.transactionHash}}</td>
+  	<td>{{post.age}}</td>
+  	<td>{{post.btc}}</td>
+  	<td>${{post.usd}}</td>
+  </tr>
+  {% endfor %}
+</div>
+  </table>
+  <button type="button" class="viewBtn">View More</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+<body>
+ 
+ <div class="topnav">
+ 	<div class="leftText"><a href="/home">Home</a></div>
+ 	<div class="leftText"><a href="#">About</a></div>
+ 	<div class="contactText"><a href="#">Contact</a></div>
+ </div>
+ <div class="logoutText"><a href="/logout">Logout</a></div>
+<div class="content">
+  <h1>Transaction Details</h1>
+
+
+  <form method="POST" action="">
+  <label><h3>Get transaction details from hash:</h3></label>
+  <div>
+    <input type="text" class="abc" id="transactionHashId" name="transactionHashId" placeholder= "Enter transaction hash" style="height: 35px;width: 185px;"></input>
+    <div class="col-md-2" style="display: none">
+        <input type="submit" name="submitM" id="submitM" value="Submit">
+  </div>
+  </div>
+  </form>
+  <div id="chk"><button class="btn-primary btn-large btn-block" id="getTrnsDetailsFromHash">Get details</button></div>
+  <div><p id="resFromHash"></p></div>
+
+
+  <form method="POST" action="">
+  <label><h3>Convert USD to BTC:</h3></label>
+  <div>
+    <input type="text" class="abc" id="transactionId" name="transactionId" placeholder= "Enter Amount" style="height: 35px;width: 185px;"></input>
+    <div class="col-md-2" style="display: none">
+        <input type="submit" name="submit_multiple3And5" id="submit_multiple3And5" value="Submit">
+  </div>
+  </div>
+  </form>
+  <div id="chk"><button class="btn-primary btn-large btn-block" id="getTrnsDetails">Convert</button></div>
+  <div><p id="conversionRes"></p></div>
+  
+
+</div>
+</body>
+  <link rel="stylesheet" href="/static/style.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$( "#getTrnsDetails" ).click(function() {
+  console.log("val "+$('#transactionId').val());
+  $.ajax({
+            url: '/getAmount',
+            data: $('form').serialize(),
+            type: 'POST',
+            success: function(response) {
+                console.log(response);
+                $("#conversionRes").html($('#transactionHashId').val()+" = "+response+"BTC");
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+});
+
+$( "#getTrnsDetailsFromHash" ).click(function() {
+  console.log("abc "+$('#transactionHashId').val());
+  $.ajax({
+            url: '/fetchTransaction',
+            data: $('form').serialize(),
+            type: 'POST',
+            dataType: 'text',
+            success: function(response) {
+                console.log(JSON.stringify(response));
+                $("#resFromHash").html("response "+response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+});
+
+/*$("#getTrnsDetails").on("click",function() {
+  alert( "Handler for .click() called." );
+});*/
+
+/*function getTransactionDetails() {
+  alert( "Handler for .click() called." );
+}*/
+
+</script>
+</html>
